@@ -1,75 +1,70 @@
 :root {
     --primary: #0056b3;
-    --text: #2c3e50;
-    --bg-light: #f4f7f6;
+    --bg-light: #f8fafc; /* Gris Bruno Barroso */
+    --bg-alt: #f1f5f9;   /* Gris un peu plus foncé pour alterner */
+    --text: #1e293b;
     --white: #ffffff;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
 
-body { font-family: 'Poppins', sans-serif; color: var(--text); line-height: 1.6; background: var(--bg-light); }
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text);
+    background-color: var(--bg-light);
+    line-height: 1.6;
+}
 
-.container { max-width: 1100px; margin: auto; padding: 0 20px; }
-.section-padding { padding: 100px 0; }
-.bg-alt { background-color: #ebf1f5; }
+.container { max-width: 1000px; margin: auto; padding: 0 20px; }
+.section-padding { padding: 80px 0; }
+.bg-alt { background-color: var(--bg-alt); }
 .text-center { text-align: center; }
 
-/* NAVBAR */
+/* NAV */
 .navbar {
-    position: fixed; top: 0; width: 100%; display: flex; justify-content: space-between;
-    padding: 20px 5%; background: white; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed; top: 0; width: 100%;
+    display: flex; justify-content: space-between; padding: 15px 5%;
+    background: white; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
-.logo { font-weight: 700; text-transform: uppercase; font-size: 1.1rem; }
+.logo { font-weight: 700; text-transform: uppercase; }
 .logo span { color: var(--primary); font-weight: 400; }
-.nav-links { display: flex; gap: 20px; list-style: none; align-items: center; }
-.nav-links a { font-size: 0.8rem; font-weight: 600; text-decoration: none; color: #555; }
+.nav-links { display: flex; gap: 15px; list-style: none; }
+.nav-links a { font-size: 0.75rem; font-weight: 600; color: #64748b; }
+.nav-links a:hover { color: var(--primary); }
 
-/* HERO : IMAGE RÉSEAU PLEIN ÉCRAN */
+/* HERO */
 .hero {
-    height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                url('https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1920&q=80');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Effet pro quand on scrolle */
-    display: flex; align-items: center; justify-content: center; text-align: center; color: white;
+    height: 75vh;
+    background: linear-gradient(rgba(248, 250, 252, 0.9), rgba(248, 250, 252, 0.9)), 
+                url('https://images.unsplash.com/photo-1558494949-ef526b01201b?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover; background-position: center;
+    display: flex; align-items: center; justify-content: center; text-align: center;
 }
-.hero h1 { font-size: 3.5rem; margin-bottom: 20px; font-weight: 700; }
-.hero p { font-size: 1.2rem; max-width: 800px; margin-bottom: 40px; opacity: 0.9; }
+.hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
 
-/* BOUTONS MILIEU */
-.hero-btns { display: flex; gap: 20px; justify-content: center; }
-.btn-primary { background: var(--primary); color: white; padding: 15px 35px; border-radius: 5px; text-decoration: none; font-weight: 600; transition: 0.3s; }
-.btn-secondary { border: 2px solid white; color: white; padding: 13px 35px; border-radius: 5px; text-decoration: none; font-weight: 600; transition: 0.3s; }
-.btn-primary:hover { background: #004494; }
-.btn-secondary:hover { background: white; color: black; }
+/* CARDS & BLOCKS */
+.info-block, .project-simple-card, .bts-card {
+    background: white; padding: 30px; border-radius: 4px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); margin-bottom: 20px;
+}
+.section-title { margin-bottom: 50px; text-transform: uppercase; font-size: 1.5rem; }
+.section-title::after { content: ''; display: block; width: 40px; height: 3px; background: var(--primary); margin-top: 10px; }
 
-/* TITRES DE SECTION */
-.section-title { font-size: 2rem; margin-bottom: 60px; text-transform: uppercase; position: relative; }
-.section-title::after { content: ''; display: block; width: 50px; height: 3px; background: var(--primary); margin: 15px auto 0; }
+.bts-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.bts-card img { width: 100%; height: 180px; object-fit: cover; margin-bottom: 15px; }
 
-/* SKILLS : Grille 3 colonnes comme demandé */
-.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 20px; }
-.skill-card { background: white; padding: 40px 20px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; }
-.skill-card i { font-size: 50px; margin-bottom: 15px; }
-.skill-card img { width: 50px; height: 50px; object-fit: contain; margin-bottom: 15px; }
-.skill-card span { display: block; font-weight: 600; color: #333; }
+/* SKILLS */
+.skills-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; }
+.skill-item { background: white; padding: 20px; text-align: center; border-radius: 4px; border: 1px solid #e2e8f0; }
+.skill-item i, .skill-item img { font-size: 30px; width: 30px; margin-bottom: 10px; }
 
-/* BTS CARDS */
-.bts-options { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-.bts-card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-.bts-card img { width: 100%; height: 250px; object-fit: cover; }
-.bts-card h3 { padding: 20px; color: var(--primary); }
-.bts-card p { padding: 0 20px 20px; font-size: 0.95rem; }
-
-/* DIVERS */
-.info-block { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-.timeline { border-left: 3px solid var(--primary); padding-left: 30px; text-align: left; }
-.timeline-item { margin-bottom: 40px; }
+/* TIMELINE */
+.timeline { border-left: 2px solid var(--primary); padding-left: 20px; }
+.timeline-item { margin-bottom: 30px; }
 .timeline-date { font-weight: 700; color: var(--primary); }
 
-.bg-dark { background: #1a202c; color: white; }
-.contact-links { display: flex; justify-content: center; gap: 40px; margin-top: 30px; }
-.contact-links a { color: white; text-decoration: none; font-size: 1.2rem; }
-
-footer { padding: 50px; background: #111; color: #777; text-align: center; font-size: 0.9rem; }
+/* FOOTER & CONTACT */
+.bg-dark { background: #0f172a; color: white; }
+.contact-links { display: flex; justify-content: center; gap: 30px; margin-top: 20px; }
+.btn-cv { background: #16a34a; color: white; padding: 10px 20px; border-radius: 4px; }
+footer { padding: 40px; background: #020617; text-align: center; color: #475569; font-size: 0.8rem; }
