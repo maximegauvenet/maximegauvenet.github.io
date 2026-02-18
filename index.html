@@ -26,12 +26,13 @@
     </nav>
 
     <header id="home" class="hero">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1>Bienvenue sur mon portfolio</h1>
             <p>Je suis Maxime Gauvenet, étudiant en 2ème année de BTS SIO option SISR au Lycée Polyvalent de Cachan.</p>
             <div class="hero-btns">
-                <a href="#competences" class="btn-primary">MES COMPÉTENCES</a>
-                <a href="CV_Maxime_Gauvenet.pdf" class="btn-secondary" download>MON CV</a>
+                <a href="#competences" class="btn-primary">GRILLE COMPÉTENCES</a>
+                <a href="#projets" class="btn-secondary">ÉPREUVE E6</a>
             </div>
         </div>
     </header>
@@ -51,17 +52,17 @@
             <h2 class="section-title">Parcours scolaire</h2>
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-date">2024 - 2026</div>
+                    <div class="timeline-date">2024 - Présent</div>
                     <div class="timeline-content">
                         <h3>BTS SIO option SISR</h3>
-                        <p>Lycée Polyvalent de Cachan | En cours de formation.</p>
+                        <p>Lycée Polyvalent de Cachan.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-date">2021 - 2024</div>
                     <div class="timeline-content">
                         <h3>Bac Pro Systèmes Numériques option RISC</h3>
-                        <p>Lycée Polyvalent de Cachan | Réseaux Informatiques et Systèmes Communiquants.</p>
+                        <p>Lycée Polyvalent de Cachan | Obtenu.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -77,18 +78,18 @@
 
     <section id="bts" class="section-padding">
         <div class="container">
-            <h2 class="section-title">Le BTS SIO</h2>
+            <h2 class="section-title">BTS SIO</h2>
             <p class="section-subtitle">Le BTS Services Informatiques aux Organisations est une formation professionnalisante qui forme des techniciens capables de concevoir, déployer et maintenir des solutions informatiques répondant aux besoins des entreprises.</p>
             
             <div class="bts-options">
                 <div class="bts-card">
-                    <img src="https://images.unsplash.com/photo-1558494949-ef526b01201b?auto=format&fit=crop&w=600&q=80" alt="SISR">
+                    <img src="https://images.unsplash.com/photo-1558494949-ef526b01201b?auto=format&fit=crop&w=600&q=80" alt="SISR Image">
                     <h3>Option SISR</h3>
                     <p class="desc">L'option <strong>SISR (Solutions d’Infrastructure, Systèmes et Réseaux)</strong> prépare les étudiants à gérer des infrastructures informatiques, à sécuriser les systèmes d’information, et à administrer des réseaux physiques et virtuels. Cette spécialisation permet d'acquérir des compétences en gestion des serveurs, virtualisation, et mise en œuvre de solutions de sécurité avancées.</p>
                 </div>
                 
                 <div class="bts-card">
-                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80" alt="SLAM">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80" alt="SLAM Image">
                     <h3>Option SLAM</h3>
                     <p class="desc">L'option <strong>SLAM (Solutions Logicielles et Applications Métiers)</strong> forme les étudiants à concevoir et développer des logiciels et applications métiers. Elle leur permet de créer des solutions adaptées aux besoins des entreprises, de gérer des projets informatiques et de travailler sur des bases de données et des systèmes intégrés.</p>
                 </div>
@@ -98,62 +99,52 @@
 
     <section id="competences" class="section-padding bg-alt">
         <div class="container">
-            <h2 class="section-title">Compétences</h2>
-            <div class="skills-list">
-                <div class="skill-item"><img src="https://www.debian.org/logos/openlogo-nd-100.png" alt="Debian"> <span>Debian</span></div>
-                <div class="skill-item"><i class="fab fa-windows" style="color:#0078d7"></i> <span>Windows Server</span></div>
-                <div class="skill-item"><i class="fas fa-network-wired" style="color:#22c55e"></i> <span>Cisco Packet Tracer</span></div>
-                <div class="skill-item"><i class="fab fa-python" style="color:#3776ab"></i> <span>Python</span></div>
-                <div class="skill-item"><i class="fas fa-microchip" style="color:#60a5fa"></i> <span>VMware / ESXi</span></div>
-                <div class="skill-item"><i class="fas fa-shield-alt" style="color:#e11d48"></i> <span>Active Directory</span></div>
+            <h2 class="section-title">Mes Compétences</h2>
+            <p class="text-center">Au fil de l'année, j'ai pu développer de nombreuses compétences sur différents outils tels que :</p>
+            
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <img src="https://www.debian.org/logos/openlogo-nd-100.png" alt="Debian Logo">
+                    <span>Debian</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-windows" style="color:#0078d7"></i>
+                    <span>Windows Server</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-network-wired" style="color:#22c55e"></i>
+                    <span>Cisco Packet Tracer</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-shield-alt" style="color:#0ea5e9"></i>
+                    <span>Active Directory</span>
+                </div>
+                <div class="skill-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Virtualbox_logo.png" alt="VirtualBox Logo" style="width: 40px;">
+                    <span>Oracle VirtualBox</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-headset" style="color:#64748b"></i>
+                    <span>Support / GLPI</span>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="stages" class="section-padding">
-        <div class="container">
-            <h2 class="section-title">Expériences professionnelles</h2>
-            <div class="info-block">
-                <h3>Stage de 1ère année - [Nom Entreprise]</h3>
-                <p>Missions réalisées : Assistance utilisateur, déploiement de postes de travail, inventaire du parc informatique via GLPI.</p>
-            </div>
-        </div>
+        <div class="container"><h2 class="section-title">Stages</h2><div class="info-block"><p>Contenu à venir...</p></div></div>
     </section>
 
     <section id="activites" class="section-padding bg-alt">
-        <div class="container">
-            <h2 class="section-title">Activités en entreprise</h2>
-            <div class="simple-grid">
-                <div class="info-block">
-                    <h3>Maintenance & Support</h3>
-                    <p>Réparation matérielle de postes clients, changement de composants, et résolution d'incidents de niveau 1 et 2.</p>
-                </div>
-                <div class="info-block">
-                    <h3>Infrastructure</h3>
-                    <p>Brassage de baies de brassage, câblage réseau et installation de switchs configurés en VLAN.</p>
-                </div>
-            </div>
-        </div>
+        <div class="container"><h2 class="section-title">Activités</h2><div class="info-block"><p>Contenu à venir...</p></div></div>
     </section>
 
     <section id="projets" class="section-padding">
-        <div class="container">
-            <h2 class="section-title">Projets réalisés</h2>
-            <div class="project-simple-card">
-                <h3>Projet E6 - [Titre du projet]</h3>
-                <p>Description détaillée du projet E6. Ce paragraphe est réservé pour expliquer l'architecture mise en place, les problématiques rencontrées et les solutions techniques apportées.</p>
-            </div>
-        </div>
+        <div class="container"><h2 class="section-title">Projets</h2><div class="project-simple-card"><h3>Projet E6</h3><p>Contenu à venir...</p></div></div>
     </section>
 
     <section id="veille" class="section-padding bg-alt">
-        <div class="container">
-            <h2 class="section-title">Veille Technologique</h2>
-            <div class="info-block">
-                <h3>Thème : La Cybersécurité et le Zéro Trust</h3>
-                <p>Méthodologie de veille : Utilisation d'agrégateurs de flux RSS, suivi de l'actualité sur l'ANSSI et participation à des webinaires techniques.</p>
-            </div>
-        </div>
+        <div class="container"><h2 class="section-title">Veille</h2><div class="info-block"><p>Contenu à venir...</p></div></div>
     </section>
 
     <section id="contact" class="section-padding bg-dark">
@@ -162,14 +153,10 @@
             <div class="contact-links">
                 <a href="mailto:maxime.gauvenet@email.com"><i class="fas fa-envelope"></i> Email</a>
                 <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="CV_Maxime_Gauvenet.pdf" class="btn-cv" download><i class="fas fa-file-download"></i> Mon CV (PDF)</a>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 Maxime Gauvenet - Portfolio BTS SIO SISR</p>
-    </footer>
-
+    <footer><p>&copy; 2024 Maxime Gauvenet</p></footer>
 </body>
 </html>
