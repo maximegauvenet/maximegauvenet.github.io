@@ -126,6 +126,18 @@
                     <i class="fas fa-headset" style="color:#64748b"></i>
                     <span>Support & GLPI</span>
                 </div>
+                <div class="skill-card">
+                    <i class="fas fa-route" style="color:#e67e22"></i>
+                    <span>Routage & OSPF<br><span style="font-size:0.8rem;font-weight:400;color:#666;">TCP/IP, Commutation</span></span>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-server" style="color:#9b59b6"></i>
+                    <span>Services LAN<br><span style="font-size:0.8rem;font-weight:400;color:#666;">DHCP (Kea), DNS (Bind9)</span></span>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-users-cog" style="color:#34495e"></i>
+                    <span>Gestion AD<br><span style="font-size:0.8rem;font-weight:400;color:#666;">Utilisateurs, Groupes, GPO</span></span>
+                </div>
             </div>
         </div>
     </section>
@@ -199,20 +211,63 @@
         <div class="container">
             <h2 class="section-title">Projets</h2>
             <div class="project-list">
+                
                 <div class="project-simple-card">
                     <h3>Infrastructure Réseau Locale</h3>
                     <p>Mise en place d'une architecture complète avec segmentation VLAN, routage inter-VLAN et services DHCP/DNS sur Windows Server.</p>
                 </div>
+
+                <div class="project-simple-card">
+                    <h3>Services DHCP & DNS sous Linux</h3>
+                    <p><strong>Contexte :</strong> Mise en place des services DHCP et DNS dans un contexte LAN sur Debian 12.9 (Bookworm) avec VirtualBox.</p>
+                    <ul>
+                        <li>Configuration des interfaces réseau.</li>
+                        <li>Installation et paramétrage du serveur DHCP (Kea) pour l'attribution dynamique d'IP.</li>
+                        <li>Déploiement du serveur DNS (Bind9) avec zones de recherche directe et inversée.</li>
+                        <li>Tests de résolution de noms et de connectivité sur les machines clientes du LAN.</li>
+                    </ul>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <section id="veille" class="section-padding">
+   <section id="veille" class="section-padding">
         <div class="container">
             <h2 class="section-title">Veille Technologique</h2>
-            <div class="info-block">
-                <h3>Sujet : La Cybersécurité des Objets Connectés (IoT)</h3>
-                <p>Suivi des actualités via Flux RSS, Feedly et sites spécialisés (ANSSI, Le Monde Informatique) sur l'évolution des menaces liées à l'interconnexion des équipements.</p>
+            
+            <div class="info-block veille-intro">
+                <h3><i class="fas fa-shield-alt"></i> Le modèle Zero Trust (ZTNA) : La fin des VPN ?</h3>
+                <p>Pour ma veille technologique, j'ai choisi de me pencher sur le <strong>Zero Trust Network Access (ZTNA)</strong>. Avec l'augmentation du télétravail et des cyberattaques, le VPN traditionnel montre ses limites (s'il est compromis, tout le réseau est accessible). Le modèle Zero Trust repose sur un principe simple : <em>"Ne jamais faire confiance, toujours vérifier"</em>.</p>
+                <p>Ce sujet est au cœur de l'actualité des infrastructures réseaux et soulève des enjeux passionnants pour un administrateur SISR : gestion fine des accès, micro-segmentation, et sécurité renforcée.</p>
+            </div>
+
+            <div class="veille-articles-grid">
+                
+                <div class="veille-article-card">
+                    <span class="article-date">Octobre 2025</span>
+                    <h4>Pourquoi les entreprises abandonnent le VPN pour le ZTNA</h4>
+                    <p class="article-source">Source : Le Monde Informatique</p>
+                    <p class="article-desc">Analyse des vulnérabilités croissantes des VPN historiques et de la transition massive des entreprises vers des architectures Zero Trust.</p>
+                    <a href="#" class="article-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="veille-article-card">
+                    <span class="article-date">Décembre 2025</span>
+                    <h4>Implémentation du Zero Trust : Les défis pour les PME</h4>
+                    <p class="article-source">Source : ZDNet France</p>
+                    <p class="article-desc">Retour d'expérience sur la complexité de déploiement d'une architecture ZTNA dans des structures avec des budgets informatiques limités.</p>
+                    <a href="#" class="article-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="veille-article-card">
+                    <span class="article-date">Février 2026</span>
+                    <h4>Recommandations de l'ANSSI sur les accès distants</h4>
+                    <p class="article-source">Source : ANSSI / CERT-FR</p>
+                    <p class="article-desc">L'Agence Nationale de la Sécurité des Systèmes d'Information publie ses directives encourageant la micro-segmentation des accès.</p>
+                    <a href="#" class="article-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                </div>
+
             </div>
         </div>
     </section>
