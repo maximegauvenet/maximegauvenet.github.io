@@ -212,23 +212,14 @@
             <h2 class="section-title">Projets</h2>
             
             <div class="project-list">
-                
-                <div class="project-simple-card">
-                    <div class="project-icon"><i class="fas fa-sitemap"></i></div>
-                    <h3>Infrastructure Réseau Locale</h3>
-                    <p>Mise en place d'une architecture complète avec segmentation VLAN, routage inter-VLAN et services DHCP/DNS sur Windows Server.</p>
-                </div>
-
                 <div class="project-simple-card">
                     <div class="project-icon"><i class="fab fa-linux"></i></div>
                     <h3>Services DHCP & DNS sous Linux (Debian)</h3>
                     
-                    <img src="https://images.unsplash.com/photo-1558494949-ef526b01201b?auto=format&fit=crop&w=600&q=80" alt="Serveur Linux" class="project-img-demo">
+                    <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=800&q=80" alt="Serveur Linux Debian" class="project-img-demo">
 
                     <p><strong>Contexte :</strong> Mise en place d'une infrastructure réseau locale (LAN) entièrement virtualisée sous <strong>Debian 12.9 (Bookworm)</strong> via Oracle VirtualBox.</p>
-                    
-                    
-                    
+
                     <ul>
                         <li><i class="fas fa-check"></i> <strong>Configuration Réseau :</strong> Paramétrage des interfaces en IP statique et gestion du routage interne.</li>
                         <li><i class="fas fa-check"></i> <strong>Service DHCP (Kea) :</strong> Installation et configuration du serveur pour l'attribution dynamique des adresses IP, des passerelles et des DNS aux clients Debian du LAN.</li>
@@ -236,7 +227,6 @@
                         <li><i class="fas fa-check"></i> <strong>Sécurisation & Tests :</strong> Vérification de la propagation des baux et de la résolution de noms entre les différents nœuds du réseau.</li>
                     </ul>
                 </div>
-
             </div>
         </div>
     </section>
@@ -260,11 +250,7 @@
                         <p>Le <strong>Zero Trust Network Access (ZTNA)</strong> est une rupture avec l'informatique "périmétrique" classique. Dans un réseau standard, on considère que tout ce qui est à l'intérieur du LAN est sûr. Le Zero Trust, lui, considère que <strong>le réseau est compromis par défaut</strong>. Chaque utilisateur, chaque appareil et chaque flux doit prouver son identité en continu pour accéder à une ressource, même s'il est physiquement dans l'entreprise.</p>
                     </div>
 
-                    <div style="text-align: center; margin: 20px 0;">
-                        <img src="https://images.unsplash.com/photo-1563206767-5b1d972e813b?auto=format&fit=crop&w=800&q=80" alt="Cybersecurity Concept" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-                    </div>
-                    
-                    
+                    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee57d5?auto=format&fit=crop&w=800&q=80" alt="Cybersecurity Architecture" class="veille-img">
 
                     <div class="veille-text-block">
                         <h4><i class="fas fa-rocket"></i> Pourquoi est-ce une révolution ?</h4>
@@ -285,29 +271,31 @@
             <h3 class="sub-section-title" style="margin-top: 40px; border-bottom: none;"><i class="far fa-newspaper"></i> Suivi de l'actualité (Flux de veille)</h3>
             
             <div class="veille-articles-grid">
+                
                 <div class="veille-article-card">
-                    <span class="article-date">Octobre 2025</span>
-                    <h4>Transition VPN vers ZTNA : État des lieux</h4>
-                    <p class="article-source"><i class="fas fa-link"></i> Source : Le Monde Informatique</p>
-                    <p class="article-desc">Décryptage des raisons qui poussent les DSI à abandonner leurs concentrateurs VPN au profit de passerelles d'accès Zero Trust.</p>
-                    <a href="https://www.lemondeinformatique.fr/" target="_blank" class="article-link">Consulter l'article <i class="fas fa-arrow-right"></i></a>
+                    <span class="article-date">Novembre 2021</span>
+                    <h4>Le ZTNA, la fin du VPN</h4>
+                    <p class="article-source"><i class="fas fa-link"></i> Source : Almond Cybersecurity</p>
+                    <p class="article-desc">Analyse des vulnérabilités des VPN historiques et comment le ZTNA réduit la surface d'attaque en offrant une sécurité applicative granulaire.</p>
+                    <a href="https://almond.eu/cybersecurity-insights/le-ztna-la-fin-du-vpn/" target="_blank" class="article-link">Consulter l'article <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="veille-article-card">
+                    <span class="article-date">Juin 2022</span>
+                    <h4>Différence entre ZTNA et VPN d'accès à distance</h4>
+                    <p class="article-source"><i class="fas fa-link"></i> Source : Sophos</p>
+                    <p class="article-desc">Explication pédagogique sur l'approche de la confiance zéro par rapport au large accès réseau fourni par les VPN traditionnels.</p>
+                    <a href="https://www.sophos.com/fr-fr/blog/zero-trust-network-access-ztna-versus-remote-access-vpn" target="_blank" class="article-link">Consulter l'article <i class="fas fa-arrow-right"></i></a>
                 </div>
                 
                 <div class="veille-article-card">
                     <span class="article-date">Janvier 2026</span>
-                    <h4>Cybersécurité : La micro-segmentation en pratique</h4>
-                    <p class="article-source"><i class="fas fa-link"></i> Source : ZDNet</p>
-                    <p class="article-desc">Comment isoler les flux critiques dans un réseau d'entreprise pour stopper la progression des ransomwares.</p>
-                    <a href="https://www.zdnet.fr/" target="_blank" class="article-link">Consulter l'article <i class="fas fa-arrow-right"></i></a>
+                    <h4>Guide Officiel : Modèle Zero Trust</h4>
+                    <p class="article-source"><i class="fas fa-link"></i> Source : ANSSI</p>
+                    <p class="article-desc">Les directives de l'Agence Nationale de la Sécurité des Systèmes d'Information pour sécuriser les accès distants via l'architecture ZTNA.</p>
+                    <a href="https://messervices.cyber.gouv.fr/guides/modele-zero-trust" target="_blank" class="article-link">Consulter l'article <i class="fas fa-arrow-right"></i></a>
                 </div>
                 
-                <div class="veille-article-card">
-                    <span class="article-date">Mars 2026</span>
-                    <h4>Guide de l'ANSSI : Maîtriser ses accès distants</h4>
-                    <p class="article-source"><i class="fas fa-link"></i> Source : ANSSI</p>
-                    <p class="article-desc">Les nouvelles recommandations officielles pour sécuriser l'administration réseau dans un contexte hybride.</p>
-                    <a href="https://cyber.gouv.fr/" target="_blank" class="article-link">Consulter l'article <i class="fas fa-arrow-right"></i></a>
-                </div>
             </div>
         </div>
     </section>
