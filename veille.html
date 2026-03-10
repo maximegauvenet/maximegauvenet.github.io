@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Maxime GAUVENET - Veille</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Portfolio <span>Maxime GAUVENET</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">ACCUEIL</a></li>
+            <li><a href="bts-sio.html">BTS SIO & FORMATION</a></li>
+            <li><a href="experiences.html">EXPÉRIENCES</a></li>
+            <li><a href="projets.html">PROJETS</a></li>
+            <li><a href="veille.html" style="color: var(--primary);">VEILLE TECH</a></li>
+            <li><a href="contact.html" class="btn-nav">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <section class="page-header bg-dark">
+        <div class="container text-center">
+            <h1 style="color: white; font-size: 2.5rem; margin-top: 50px;">Veille Technologique</h1>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            
+            <div class="veille-theorie" style="margin-bottom: 50px; padding: 40px; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-left: 5px solid var(--primary);">
+                <h3><i class="fas fa-shield-alt" style="color: var(--primary);"></i> Le modèle Zero Trust (ZTNA)</h3>
+                <p>En 2026, le VPN classique est obsolète. Le modèle Zero Trust repose sur le principe <em>"Ne jamais faire confiance, toujours vérifier"</em>. Avec l'IA adaptative et la directive européenne NIS 2, la micro-segmentation des réseaux d'entreprise est devenue la priorité absolue des équipes SISR pour contrer les ransomwares.</p>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                <h3 class="sub-section-title" style="margin: 0;"><i class="fas fa-sync fa-spin"></i> Flux d'actualité (ANSSI CERT-FR)</h3>
+                <a href="https://www.cert.ssi.gouv.fr/feed/" target="_blank" class="btn-rss"><i class="fas fa-rss"></i> Flux RSS</a>
+            </div>
+            
+            <div id="flux-rss-container" class="veille-articles-grid">
+                <p>Chargement des dernières alertes cyber...</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Maxime Gauvenet - Portfolio Professionnel</p>
+    </footer>
+
+    <script>
+        const rssUrl = "https://api.rss2json.com/v1/api.json?rss_url=https://www.cert.ssi.gouv.fr/feed/";
+        
+        fetch(rssUrl)
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById('flux-rss-container');
+                container.innerHTML = ''; 
+                
+                data.items.slice(0, 6).forEach(item => {
+                    const dateObj = new Date(item.pubDate);
+                    const dateFR = dateObj.toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' });
+                    
+                    const articleHTML = `
+                        <div class="veille-article-card">
+                            <span class="article-date">${dateFR}</span>
+                            <h4>${item.title}</h4>
+                            <p class="article-source"><i class="fas fa-shield-alt"></i> Source: CERT-FR (ANSSI)</p>
+                            <a href="${item.link}" target="_blank" class="article-link">Consulter l'alerte <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    `;
+                    container.innerHTML += articleHTML;
+                });
+            })
+            .catch(error => {
+                document.getElementById('flux-rss-container').innerHTML = "<p>Erreur lors du chargement du flux.</p>";
+            });
+    </script>
+
+</body>
+</html>
