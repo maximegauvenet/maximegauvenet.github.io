@@ -65,9 +65,10 @@
         <div class="modal-content">
             <span class="close-btn" onclick="fermerModal('projet1')">&times;</span>
             <h2 style="margin-bottom: 20px; color: var(--primary);">Infrastructure LAN (DHCP & DNS)</h2>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 10px;"><i class="fas fa-info-circle"></i> Cliquez sur les images pour les agrandir.</p>
             <div class="modal-gallery">
-                <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=400&q=80">
-                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=400&q=80">
+                <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=800&q=80" onclick="ouvrirLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" onclick="ouvrirLightbox(this)">
             </div>
             <p style="margin-bottom: 20px;"><strong>Description :</strong> Mise en place d'une infrastructure réseau locale (LAN) entièrement virtualisée sous Debian 12.9 (Bookworm) via Oracle VirtualBox.</p>
             <ul>
@@ -82,12 +83,11 @@
         <div class="modal-content">
             <span class="close-btn" onclick="fermerModal('projet2')">&times;</span>
             <h2 style="margin-bottom: 20px; color: var(--primary);">Déploiement Active Directory</h2>
-            
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 10px;"><i class="fas fa-info-circle"></i> Cliquez sur les images pour les agrandir.</p>
             <div class="modal-gallery">
-                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=400&q=80" alt="Image AD 1">
-                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=400&q=80" alt="Image AD 2">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="Image AD 1" onclick="ouvrirLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80" alt="Image AD 2" onclick="ouvrirLightbox(this)">
             </div>
-
             <p style="margin-bottom: 20px;"><strong>Description :</strong> Mise en place complète d'une infrastructure domaine sous Windows Server 2022 pour simuler un environnement d'entreprise.</p>
             <ul>
                 <li><i class="fas fa-check" style="color: var(--primary);"></i> <strong>Création d'utilisateurs :</strong> Importation de listes, gestion des OU et groupes de sécurité.</li>
@@ -101,12 +101,11 @@
         <div class="modal-content">
             <span class="close-btn" onclick="fermerModal('projet3')">&times;</span>
             <h2 style="margin-bottom: 20px; color: var(--primary);">Mise en place de GLPI</h2>
-            
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 10px;"><i class="fas fa-info-circle"></i> Cliquez sur les images pour les agrandir.</p>
             <div class="modal-gallery">
-                <img src="https://images.unsplash.com/photo-1614064641936-3899897fa284?auto=format&fit=crop&w=400&q=80" alt="Image GLPI 1">
-                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" alt="Image GLPI 2">
+                <img src="https://images.unsplash.com/photo-1614064641936-3899897fa284?auto=format&fit=crop&w=800&q=80" alt="Image GLPI 1" onclick="ouvrirLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="Image GLPI 2" onclick="ouvrirLightbox(this)">
             </div>
-
             <p style="margin-bottom: 20px;"><strong>Description :</strong> Installation d'un serveur GLPI sous Linux pour assurer le suivi des incidents (Ticketing) et l'inventaire du parc informatique.</p>
             <ul>
                 <li><i class="fas fa-check" style="color: var(--primary);"></i> <strong>Installation :</strong> Déploiement du serveur web LAMP (Linux, Apache, MariaDB, PHP).</li>
@@ -116,9 +115,57 @@
         </div>
     </div>
 
+    <div id="lightbox" class="lightbox-overlay">
+        <span class="lightbox-close" onclick="fermerLightbox()">&times;</span>
+        <span class="lightbox-nav prev" onclick="changerImage(-1)">&#10094;</span>
+        <img id="lightbox-img" src="" alt="Image plein écran">
+        <span class="lightbox-nav next" onclick="changerImage(1)">&#10095;</span>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Maxime Gauvenet - Portfolio Professionnel</p>
+    </footer>
+
     <script>
+        // Gestion des modales
         function ouvrirModal(id) { document.getElementById(id).style.display = 'flex'; }
         function fermerModal(id) { document.getElementById(id).style.display = 'none'; }
+
+        // Gestion de la visionneuse d'images
+        let imagesGalerie = [];
+        let indexImageCourante = 0;
+
+        function ouvrirLightbox(elementImage) {
+            // Trouver toutes les images de la même galerie
+            const galerie = elementImage.closest('.modal-gallery');
+            const images = galerie.querySelectorAll('img');
+            
+            // Créer une liste de toutes les sources d'images
+            imagesGalerie = Array.from(images).map(img => img.src);
+            // Trouver la position de l'image cliquée
+            indexImageCourante = imagesGalerie.indexOf(elementImage.src);
+            
+            // Afficher le lightbox avec la bonne image
+            document.getElementById('lightbox-img').src = imagesGalerie[indexImageCourante];
+            document.getElementById('lightbox').style.display = 'flex';
+        }
+
+        function fermerLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+
+        function changerImage(direction) {
+            indexImageCourante += direction;
+            // Si on dépasse la fin, on revient au début
+            if (indexImageCourante >= imagesGalerie.length) {
+                indexImageCourante = 0;
+            } 
+            // Si on recule avant le début, on va à la fin
+            else if (indexImageCourante < 0) {
+                indexImageCourante = imagesGalerie.length - 1;
+            }
+            document.getElementById('lightbox-img').src = imagesGalerie[indexImageCourante];
+        }
     </script>
 </body>
 </html>
