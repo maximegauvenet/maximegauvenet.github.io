@@ -129,3 +129,76 @@ body { background-color: var(--bg-dark); color: var(--text-main); line-height: 1
 .article-link { color: var(--primary); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 5px; margin-top: auto; }
 
 footer { background: #070b14; padding: 40px; text-align: center; color: var(--text-muted); border-top: 1px solid var(--border); }
+
+/* --- VISIONNEUSE D'IMAGES (LIGHTBOX) --- */
+.modal-gallery img {
+    cursor: zoom-in; /* Montre à l'utilisateur qu'il peut cliquer */
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.modal-gallery img:hover {
+    transform: scale(1.02);
+    border-color: var(--primary);
+}
+
+.lightbox-overlay {
+    display: none; /* Caché par défaut */
+    position: fixed;
+    z-index: 9999; /* Au-dessus de tout le reste */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    align-items: center;
+    justify-content: center;
+}
+
+#lightbox-img {
+    max-width: 90%;
+    max-height: 90vh;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    object-fit: contain;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 3.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    line-height: 1;
+}
+
+.lightbox-close:hover {
+    color: var(--primary);
+}
+
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 20px;
+    user-select: none;
+    transition: 0.3s;
+}
+
+.lightbox-nav:hover {
+    color: var(--primary);
+}
+
+.lightbox-nav.prev {
+    left: 20px;
+}
+
+.lightbox-nav.next {
+    right: 20px;
+}
