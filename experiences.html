@@ -5,35 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Maxime GAUVENET - Expériences</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-
+<body class="bg-alt">
+    
     <nav class="navbar">
         <div class="logo">Portfolio <span>Maxime GAUVENET</span></div>
         <ul class="nav-links">
             <li><a href="index.html">ACCUEIL</a></li>
-            <li><a href="bts-sio.html">BTS SIO & FORMATION</a></li>
-            <li><a href="experiences.html" style="color: var(--primary);">EXPÉRIENCES</a></li>
+            <li><a href="bts-sio.html">BTS SIO</a></li>
+            <li><a href="competences.html">COMPÉTENCES</a></li>
+            <li><a href="experiences.html" class="active">EXPÉRIENCES</a></li>
             <li><a href="projets.html">PROJETS</a></li>
-            <li><a href="veille.html">VEILLE TECH</a></li>
+            <li><a href="veille.html">VEILLE</a></li>
             <li><a href="contact.html" class="btn-nav">CONTACT</a></li>
         </ul>
     </nav>
 
-    <section class="page-header bg-dark">
-        <div class="container text-center">
-            <h1 style="color: white; font-size: 2.5rem; margin-top: 50px;">Mes Expériences</h1>
-        </div>
-    </section>
-
-    <section class="section-padding">
+    <section class="section-padding" style="margin-top: 50px;">
         <div class="container">
+            <h2 class="section-title">Mes Expériences</h2>
 
             <h3 class="sub-section-title"><i class="fas fa-briefcase"></i> Expériences professionnelles (Emplois)</h3>
-            <div class="experience-list">
-                <div class="experience-card work-card">
+            <div class="experience-list" style="margin-bottom: 60px;">
+                
+                <div class="experience-card">
                     <div class="exp-header">
                         <img src="https://www.macapflag.com/blog/wp-content/uploads/2022/05/origine-logo-JO-Paris-2024.jpg" alt="JO 2024" class="exp-logo">
                         <div class="exp-title">
@@ -41,142 +37,155 @@
                             <span class="exp-date">Été 2024</span>
                         </div>
                     </div>
-                    <div class="exp-body">
-                        <div class="job-meta">
-                            <p><strong>Poste :</strong> Agent technique / Support</p>
-                            <a href="https://www.paris2024.org/fr/" target="_blank" class="company-link"><i class="fas fa-external-link-alt"></i> Site officiel</a>
+                    <div class="job-meta">
+                        <p><strong>Poste :</strong> Technicien IT</p>
+                        <a href="https://www.olympics.com/fr/olympic-games/paris-2024" target="_blank" class="company-link"><i class="fas fa-external-link-alt"></i> Site officiel</a>
+                    </div>
+                    
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <p>Installation et maintenance d'équipements pour les postes commentateurs, journalistes et les équipes de PARIS 2024 (postes, imprimantes, télévisions,...)</p>
+                            <img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?auto=format&fit=crop&w=800&q=80" alt="Matériel JO">
                         </div>
-                        <div class="activity-list">
-                            <div class="activity-item">
-                                <img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?auto=format&fit=crop&w=150&q=80" alt="Matériel JO">
-                                <p>Installation et maintenance d'équipements pour les postes commentateurs, journalistes et les équipes de PARIS 2024 (postes, imprimantes, télévisions, ...)</p>
-                            </div>
-                            <div class="activity-item">
-                                <img src="https://images.unsplash.com/photo-1586528116311-ad8ed7c83a7f?auto=format&fit=crop&w=150&q=80" alt="Stock">
-                                <p>Gestion rigoureuse des stocks et de l'inventaire matériel.</p>
-                            </div>
+                        <div class="activity-item">
+                            <p>Gestion de stocks et inventaire.</p>
+                            <img src="https://images.unsplash.com/photo-1586528116311-ad8ed7c83a7f?auto=format&fit=crop&w=800&q=80" alt="Stock JO">
                         </div>
                     </div>
                 </div>
+
             </div>
 
-            <h3 class="sub-section-title" style="margin-top: 50px;"><i class="fas fa-user-graduate"></i> Stages en entreprise</h3>
+            <h3 class="sub-section-title"><i class="fas fa-user-graduate"></i> Stages en entreprise</h3>
             <div class="experience-list">
                 
-                <div class="experience-card stage-card">
+                <div class="experience-card">
                     <div class="exp-header">
-                        <img src="https://upload.wikimedia.org/wikipedia/fr/d/d3/Logo_Chantelle.jpg" alt="Chantelle" class="exp-logo" style="object-fit: contain;">
+                        <img src="https://upload.wikimedia.org/wikipedia/fr/d/d3/Logo_Chantelle.jpg" alt="Chantelle" class="exp-logo" style="background: white;">
                         <div class="exp-title">
-                            <h4><strong>Groupe CHANTELLE</strong></h4>
+                            <h4>Groupe CHANTELLE (Lingerie de luxe)</h4>
                             <span class="exp-date">12 Janvier 2026 au 20 Février 2026</span>
                         </div>
                     </div>
-                    <div class="exp-body">
-                        <div class="job-meta">
-                            <p><strong>Poste :</strong> Technicien IT Service Desk</p>
-                            <a href="https://chantelle.com/" target="_blank" class="company-link"><i class="fas fa-external-link-alt"></i> Site de l'entreprise</a>
+                    <div class="job-meta">
+                        <p><strong>Poste :</strong> Technicien IT Service Desk / Systèmes et Réseaux</p>
+                        <a href="https://chantelle.com/" target="_blank" class="company-link"><i class="fas fa-external-link-alt"></i> Site de l'entreprise</a>
+                    </div>
+                    
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <p><strong>Cybersécurité :</strong> Gestion des campagnes de sensibilisation pour les employés via la plateforme Riot (simulation de phishing ciblé, fraude au PDG, malware).</p>
+                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80" alt="Phishing Riot">
                         </div>
-                        <div class="activity-list">
-                            <div class="activity-item">
-                                <img src="https://images.unsplash.com/photo-1614064641936-3899897fa284?auto=format&fit=crop&w=150&q=80" alt="Phishing Riot">
-                                <p><strong>Cybersécurité :</strong> Gestion des campagnes de sensibilisation via la plateforme Riot.</p>
-                            </div>
-                            <div class="activity-item">
-                                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=150&q=80" alt="Switch">
-                                <p><strong>Réseau :</strong> Diagnostic sur des switchs en cascade et trames réseau (IP <span class="redacted">172.17.X.X</span>).</p>
-                            </div>
+                        <div class="activity-item">
+                            <p><strong>Réseau :</strong> Diagnostic sur des switchs en cascade, analyse de ports bloqués et de trames réseau (Vérification d'équipements sur la plage IP <span class="redacted">172.17.X.X</span> et adresses MAC <span class="redacted">XX:XX:XX:XX:XX:XX</span>).</p>
+                            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" alt="Switch Réseau">
+                        </div>
+                        <div class="activity-item">
+                            <p><strong>Support :</strong> Assistance technique de niveau 1 et résolution d'incidents utilisateurs (Service Desk).</p>
+                            <img src="https://images.unsplash.com/photo-1534536281715-e28d76689b4d?auto=format&fit=crop&w=800&q=80" alt="Support IT">
                         </div>
                     </div>
                 </div>
 
-                <div class="experience-card stage-card">
+                <div class="experience-card">
                     <div class="exp-header">
                         <img src="https://pbs.twimg.com/profile_images/880095659013132289/2coSmMx2_400x400.jpg" alt="Infomax" class="exp-logo">
                         <div class="exp-title">
-                            <h4><strong>INFOMAX PARIS</strong></h4>
+                            <h4>INFOMAX PARIS (Expert assemblage PC Gamer)</h4>
                             <span class="exp-date">19 Mai 2025 au 04 Juillet 2025</span>
                         </div>
                     </div>
-                    <div class="exp-body">
-                        <div class="job-meta">
-                            <p><strong>Poste :</strong> Technicien / Monteur d'ordinateur</p>
-                            <a href="https://infomaxparis.com/" target="_blank" class="company-link"><i class="fas fa-external-link-alt"></i> Site de la boutique</a>
+                    <div class="job-meta">
+                        <p><strong>Poste :</strong> Technicien / Monteur d'ordinateur</p>
+                        <a href="https://infomaxparis.com/" target="_blank" class="company-link"><i class="fas fa-external-link-alt"></i> Site de la boutique</a>
+                    </div>
+                    
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <p>Montage d'ordinateur sur mesure pour les clients des filiales INFOMAX et POWERLAB.</p>
+                            <img src="https://images.unsplash.com/photo-1587202372634-32705e3bf49c?auto=format&fit=crop&w=800&q=80" alt="Montage PC">
                         </div>
-                        <div class="activity-list">
-                            <div class="activity-item">
-                                <img src="https://images.unsplash.com/photo-1587202372634-32705e3bf49c?auto=format&fit=crop&w=150&q=80" alt="Montage PC">
-                                <p>Montage d'ordinateur sur mesure pour les clients des filiales INFOMAX et POWERLAB.</p>
-                            </div>
+                        <div class="activity-item">
+                            <p>Accueil et conseils pointus sur le choix du matériel (composants, compatibilité) pour les clients.</p>
                         </div>
-                        <h5 class="custom-subtitle"><i class="fas fa-camera-retro"></i> Mes Réalisations</h5>
-                        <div class="gallery-grid">
-                            <img src="pc1.jpg" alt="PC Gamer 1">
-                            <img src="pc2.jpg" alt="PC Gamer 2">
-                        </div>
-                        <h5 class="custom-subtitle"><i class="fas fa-tools"></i> Outils utilisés</h5>
-                        <div class="tools-grid">
-                            <div class="tool-card">
-                                <img src="https://brunobarroso.me/wp-content/uploads/2024/12/logomark_red-1-150x150.png" alt="OCCT">
-                                <span>OCCT TEST</span>
-                            </div>
-                            <div class="tool-card">
-                                <img src="https://brunobarroso.me/wp-content/uploads/2024/12/windows-11-logo-0-150x150.png" alt="Win11">
-                                <span>WINDOWS 11</span>
-                            </div>
-                        </div>
+                    </div>
+
+                    <h5 class="custom-subtitle" style="color:white;"><i class="fas fa-camera-retro"></i> Mes Réalisations</h5>
+                    <div class="gallery-grid">
+                        <img src="pc1.jpg" alt="PC Gamer 1">
+                        <img src="pc2.jpg" alt="PC Gamer 2">
+                    </div>
+
+                    <h5 class="custom-subtitle" style="color:white;"><i class="fas fa-tools"></i> Outils utilisés</h5>
+                    <div class="tools-grid">
+                        <div class="tool-card"><img src="https://brunobarroso.me/wp-content/uploads/2024/12/logomark_red-1-150x150.png" alt="OCCT"><span style="color:white;">OCCT TEST</span></div>
+                        <div class="tool-card"><img src="https://brunobarroso.me/wp-content/uploads/2024/12/windows-11-logo-0-150x150.png" alt="Win11"><span style="color:white;">WINDOWS 11</span></div>
                     </div>
                 </div>
 
-                <div class="experience-card stage-card">
+                <div class="experience-card">
                     <div class="exp-header">
-                        <img src="https://www.securinfor.fr//wp-content/uploads/2023/02/securinfor-logo-bleu-2.png" alt="Securinfor" class="exp-logo">
+                        <img src="https://www.securinfor.fr//wp-content/uploads/2023/02/securinfor-logo-bleu-2.png" alt="Securinfor" class="exp-logo" style="background: white;">
                         <div class="exp-title">
-                            <h4><strong>SECURINFOR</strong></h4>
+                            <h4>SECURINFOR (Infogérance & Intégration)</h4>
                             <span class="exp-date">27 Nov 2023 au 02 Fév 2024</span>
                         </div>
                     </div>
-                    <div class="exp-body">
-                        <div class="job-meta">
-                            <p><strong>Poste :</strong> Stagiaire Technicien intégration / masterisation</p>
-                            <a href="https://www.securinfor.fr/" target="_blank" class="company-link"><i class="fas fa-external-link-alt"></i> Site entreprise</a>
+                    <div class="job-meta">
+                        <p><strong>Poste :</strong> Stagiaire Technicien intégration / masterisation</p>
+                        <a href="https://www.securinfor.fr/" target="_blank" class="company-link"><i class="fas fa-external-link-alt"></i> Site de l'entreprise</a>
+                    </div>
+                    
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <p>Masterisation des postes des clients partenaires (Synergie, Channel, BRED Banque populaire...).</p>
+                            <img src="https://images.unsplash.com/photo-1531297172864-45d1b0a11681?auto=format&fit=crop&w=800&q=80" alt="Masterisation">
                         </div>
-                        <div class="activity-list">
-                            <div class="activity-item">
-                                <img src="https://images.unsplash.com/photo-1531297172864-45d1b0a11681?auto=format&fit=crop&w=150&q=80" alt="Masterisation">
-                                <p>Masterisation des postes des clients partenaires (Synergie, Channel, BRED...).</p>
-                            </div>
+                        <div class="activity-item">
+                            <p>Réalisation de tests SAV sur le matériel Lenovo, gestion d'inventaire, étiquetage et entrée en stock.</p>
+                            <img src="https://images.unsplash.com/photo-1588508065123-287b28e0131b?auto=format&fit=crop&w=800&q=80" alt="SAV Lenovo">
                         </div>
                     </div>
                 </div>
 
-                <div class="experience-card stage-card">
+                <div class="experience-card">
                     <div class="exp-header">
                         <img src="https://sfa.backend.sfagroup.com/sites/default/files/styles/focal_point_m/public/2025-03/logo-group-french-square.jpg.webp?itok=TtHnpWQu" alt="SFA" class="exp-logo">
                         <div class="exp-title">
-                            <h4><strong>SFA</strong></h4>
+                            <h4>SFA (Expert français du relevage des eaux)</h4>
                             <span class="exp-date">30 Janvier au 07 Avril 2023</span>
                         </div>
                     </div>
-                    <div class="exp-body">
-                        <div class="job-meta">
-                            <p><strong>Poste :</strong> Stagiaire Technicien Helpdesk</p>
-                            <a href="https://www.sfa.fr/" target="_blank" class="company-link"><i class="fas fa-external-link-alt"></i> Site entreprise</a>
+                    <div class="job-meta">
+                        <p><strong>Poste :</strong> Stagiaire Technicien Helpdesk</p>
+                        <a href="https://www.sfa.fr/" target="_blank" class="company-link"><i class="fas fa-external-link-alt"></i> Site de l'entreprise</a>
+                    </div>
+                    
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <p>Installation de PC pour les nouveaux utilisateurs.</p>
+                            <img src="https://images.unsplash.com/photo-1593640495253-23196b27a87f?auto=format&fit=crop&w=800&q=80" alt="Install PC">
                         </div>
-                        <div class="activity-list">
-                            <div class="activity-item">
-                                <img src="https://images.unsplash.com/photo-1593640495253-23196b27a87f?auto=format&fit=crop&w=150&q=80" alt="Install">
-                                <p>Installation de PC pour les nouveaux utilisateurs et création de plans 3D (KoziKaza).</p>
-                            </div>
+                        <div class="activity-item">
+                            <p>Effacement sécurisé de données avec Blancco.</p>
+                            <img src="https://images.unsplash.com/photo-1618060932014-4bcd7384a511?auto=format&fit=crop&w=800&q=80" alt="Blancco">
+                        </div>
+                        <div class="activity-item">
+                            <p>Plateforme de cybersécurité Meta Compliance.</p>
+                            <img src="https://images.unsplash.com/photo-1563986768494-4dee2763ff0f?auto=format&fit=crop&w=800&q=80" alt="Meta Compliance">
+                        </div>
+                        <div class="activity-item">
+                            <p>Création de plans 3D des locaux (KoziKaza).</p>
+                            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80" alt="Plans 3D">
                         </div>
                     </div>
                 </div>
+                
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 Maxime Gauvenet - Portfolio Professionnel</p>
-    </footer>
-
+    <footer><p>&copy; 2026 Maxime Gauvenet - Portfolio Professionnel</p></footer>
 </body>
 </html>
