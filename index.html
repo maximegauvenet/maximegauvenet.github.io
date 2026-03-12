@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Maxime GAUVENET - Accueil</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -13,95 +12,47 @@
     <nav class="navbar">
         <div class="logo">Portfolio <span>Maxime GAUVENET</span></div>
         <ul class="nav-links">
-            <li><a href="index.html" style="color: var(--primary);">ACCUEIL</a></li>
-            <li><a href="bts-sio.html">BTS SIO & FORMATION</a></li>
+            <li><a href="index.html" class="active">ACCUEIL</a></li>
+            <li><a href="bts-sio.html">BTS SIO</a></li>
+            <li><a href="competences.html">COMPÉTENCES</a></li>
             <li><a href="experiences.html">EXPÉRIENCES</a></li>
             <li><a href="projets.html">PROJETS</a></li>
-            <li><a href="veille.html">VEILLE TECH</a></li>
+            <li><a href="veille.html">VEILLE</a></li>
             <li><a href="contact.html" class="btn-nav">CONTACT</a></li>
         </ul>
     </nav>
 
     <header id="home" class="hero">
         <div class="hero-overlay"></div>
-        <div class="hero-content">
+        <div class="hero-content container">
             <h1>Bienvenue sur mon portfolio</h1>
             <p>Je suis Maxime Gauvenet, étudiant en BTS SIO option SISR au Lycée Polyvalent de Cachan.</p>
             <div class="hero-btns">
-                <a href="bts-sio.html" class="btn-primary">MES COMPÉTENCES</a>
+                <a href="competences.html" class="btn-primary">MES COMPÉTENCES</a>
                 <a href="experiences.html" class="btn-secondary">MES EXPÉRIENCES</a>
+                <a href="CV_Maxime_Gauvenet.pdf" download class="btn-cv"><i class="fas fa-file-download"></i> TÉLÉCHARGER MON CV</a>
             </div>
         </div>
     </header>
 
-    <section id="about" class="section-padding">
+    <section id="about" class="section-padding bg-alt">
         <div class="container">
-            <h2 class="section-title text-center">À propos</h2>
-            
+            <h2 class="section-title">À propos</h2>
             <div class="about-layout">
                 <div class="about-text">
                     <p>Actuellement en Brevet de Technicien Supérieur aux Services Informatiques aux Organisations (SIO), je me spécialise dans la branche <strong>SISR</strong>.</p>
                     <p>Mon cursus me permet d'acquérir les compétences nécessaires à l'administration de parcs informatiques, la gestion des réseaux et la sécurisation des infrastructures systèmes d'entreprise. Mon objectif est d'évoluer vers les métiers de l'administration système et réseau ou de la cybersécurité.</p>
                 </div>
-                
                 <div class="about-stats">
-                    <div class="stat-box">
-                        <i class="fas fa-briefcase"></i>
-                        <h3>1</h3>
-                        <p>Expérience Pro</p>
-                    </div>
-                    <div class="stat-box">
-                        <i class="fas fa-user-graduate"></i>
-                        <h3>5</h3>
-                        <p>Stages</p>
-                    </div>
-                    <div class="stat-box">
-                        <i class="fas fa-tools"></i>
-                        <h3>8+</h3>
-                        <p>Outils maîtrisés</p>
-                    </div>
-                    <div class="stat-box">
-                        <i class="fas fa-network-wired"></i>
-                        <h3>2</h3>
-                        <p>Diplômes</p>
-                    </div>
+                    <div class="stat-box"><i class="fas fa-briefcase"></i><h3>1</h3><p>Expérience Pro</p></div>
+                    <div class="stat-box"><i class="fas fa-user-graduate"></i><h3>5</h3><p>Stages</p></div>
+                    <div class="stat-box"><i class="fas fa-tools"></i><h3>8+</h3><p>Outils</p></div>
+                    <div class="stat-box"><i class="fas fa-certificate"></i><h3>2</h3><p>Diplômes</p></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="parcours" class="section-padding bg-alt">
-        <div class="container">
-            <h2 class="section-title">Parcours scolaire</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">2024 - Présent</div>
-                    <div class="timeline-content">
-                        <h3>BTS SIO option SISR</h3>
-                        <p>Lycée Polyvalent de Cachan | En cours de formation.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2021 - 2024</div>
-                    <div class="timeline-content">
-                        <h3>Bac Pro Systèmes Numériques option RISC</h3>
-                        <p>Lycée Polyvalent de Cachan | Réseaux Informatiques et Systèmes Communiquants.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2021</div>
-                    <div class="timeline-content">
-                        <h3>Diplôme National du Brevet</h3>
-                        <p>Collège Eugène Chevreul, L'Haÿ-les-Roses.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Maxime Gauvenet - Portfolio Professionnel</p>
-    </footer>
-
+    <footer><p>&copy; 2026 Maxime Gauvenet - Portfolio Professionnel</p></footer>
 </body>
 </html>
