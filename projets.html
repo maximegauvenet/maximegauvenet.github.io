@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body class="bg-alt">
     <nav class="navbar">
         <div class="logo">Portfolio <span>Maxime GAUVENET</span></div>
         <ul class="nav-links">
@@ -52,7 +52,7 @@
                     <div class="projet-card-content">
                         <div style="background:var(--border); font-size:0.7rem; padding:4px 10px; border-radius:20px; align-self:flex-start; margin-bottom:10px;">PERSONNEL</div>
                         <h3>Mise en place de GLPI</h3>
-                        <p>Installation d'un serveur de ticketing GLPI pour la gestion de parc informatique.</p>
+                        <p>Installation d'un serveur de ticketing GLPI pour la gestion de parc informatique et support.</p>
                         <button class="btn-details" onclick="ouvrirModal('projet3')">Voir les détails &rarr;</button>
                     </div>
                 </div>
@@ -65,23 +65,56 @@
         <div class="modal-content">
             <span class="close-btn" onclick="fermerModal('projet1')">&times;</span>
             <h2 style="margin-bottom: 20px; color: var(--primary);">Infrastructure LAN (DHCP & DNS)</h2>
-            
             <div class="modal-gallery">
                 <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=400&q=80">
                 <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=400&q=80">
             </div>
-
             <p style="margin-bottom: 20px;"><strong>Description :</strong> Mise en place d'une infrastructure réseau locale (LAN) entièrement virtualisée sous Debian 12.9 (Bookworm) via Oracle VirtualBox.</p>
             <ul>
-                <li><strong>Configuration Réseau :</strong> Paramétrage des interfaces en IP statique.</li>
-                <li><strong>Service DHCP (Kea) :</strong> Attribution dynamique des adresses IP aux clients.</li>
-                <li><strong>Service DNS (Bind9) :</strong> Déploiement des zones de recherche directe et inversée.</li>
+                <li><i class="fas fa-check" style="color: var(--primary);"></i> <strong>Configuration Réseau :</strong> Paramétrage des interfaces en IP statique.</li>
+                <li><i class="fas fa-check" style="color: var(--primary);"></i> <strong>Service DHCP (Kea) :</strong> Attribution dynamique des adresses IP aux clients.</li>
+                <li><i class="fas fa-check" style="color: var(--primary);"></i> <strong>Service DNS (Bind9) :</strong> Déploiement des zones de recherche directe et inversée.</li>
             </ul>
         </div>
     </div>
 
-    <div id="projet2" class="modal-overlay"><div class="modal-content"><span class="close-btn" onclick="fermerModal('projet2')">&times;</span><h2>Déploiement AD</h2><p>Contenu à venir...</p></div></div>
-    <div id="projet3" class="modal-overlay"><div class="modal-content"><span class="close-btn" onclick="fermerModal('projet3')">&times;</span><h2>GLPI</h2><p>Contenu à venir...</p></div></div>
+    <div id="projet2" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-btn" onclick="fermerModal('projet2')">&times;</span>
+            <h2 style="margin-bottom: 20px; color: var(--primary);">Déploiement Active Directory</h2>
+            
+            <div class="modal-gallery">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=400&q=80" alt="Image AD 1">
+                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=400&q=80" alt="Image AD 2">
+            </div>
+
+            <p style="margin-bottom: 20px;"><strong>Description :</strong> Mise en place complète d'une infrastructure domaine sous Windows Server 2022 pour simuler un environnement d'entreprise.</p>
+            <ul>
+                <li><i class="fas fa-check" style="color: var(--primary);"></i> <strong>Création d'utilisateurs :</strong> Importation de listes, gestion des OU et groupes de sécurité.</li>
+                <li><i class="fas fa-check" style="color: var(--primary);"></i> <strong>Stratégies de groupes (GPO) :</strong> Mappage de lecteurs réseaux, restriction du panneau de configuration.</li>
+                <li><i class="fas fa-check" style="color: var(--primary);"></i> <strong>Sécurité :</strong> Configuration d'une politique de mots de passe stricts.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="projet3" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-btn" onclick="fermerModal('projet3')">&times;</span>
+            <h2 style="margin-bottom: 20px; color: var(--primary);">Mise en place de GLPI</h2>
+            
+            <div class="modal-gallery">
+                <img src="https://images.unsplash.com/photo-1614064641936-3899897fa284?auto=format&fit=crop&w=400&q=80" alt="Image GLPI 1">
+                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" alt="Image GLPI 2">
+            </div>
+
+            <p style="margin-bottom: 20px;"><strong>Description :</strong> Installation d'un serveur GLPI sous Linux pour assurer le suivi des incidents (Ticketing) et l'inventaire du parc informatique.</p>
+            <ul>
+                <li><i class="fas fa-check" style="color: var(--primary);"></i> <strong>Installation :</strong> Déploiement du serveur web LAMP (Linux, Apache, MariaDB, PHP).</li>
+                <li><i class="fas fa-check" style="color: var(--primary);"></i> <strong>Ticketing :</strong> Création de formulaires pour la remontée d'incidents utilisateurs.</li>
+                <li><i class="fas fa-check" style="color: var(--primary);"></i> <strong>Inventaire :</strong> Configuration de l'agent FusionInventory pour la remontée automatique des postes.</li>
+            </ul>
+        </div>
+    </div>
 
     <script>
         function ouvrirModal(id) { document.getElementById(id).style.display = 'flex'; }
