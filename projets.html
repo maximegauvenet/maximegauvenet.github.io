@@ -5,39 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Maxime GAUVENET - Projets</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-alt">
-
+<body>
     <nav class="navbar">
         <div class="logo">Portfolio <span>Maxime GAUVENET</span></div>
         <ul class="nav-links">
             <li><a href="index.html">ACCUEIL</a></li>
-            <li><a href="bts-sio.html">BTS SIO & FORMATION</a></li>
+            <li><a href="bts-sio.html">BTS SIO</a></li>
+            <li><a href="competences.html">COMPÉTENCES</a></li>
             <li><a href="experiences.html">EXPÉRIENCES</a></li>
-            <li><a href="projets.html" style="color: var(--primary);">PROJETS</a></li>
-            <li><a href="veille.html">VEILLE TECH</a></li>
+            <li><a href="projets.html" class="active">PROJETS</a></li>
+            <li><a href="veille.html">VEILLE</a></li>
             <li><a href="contact.html" class="btn-nav">CONTACT</a></li>
         </ul>
     </nav>
 
-    <section class="page-header bg-dark">
-        <div class="container text-center">
-            <h1 style="color: white; font-size: 2.5rem; margin-top: 50px;">Mes Projets SISR</h1>
-        </div>
-    </section>
-
-    <section class="section-padding">
+    <section class="section-padding" style="margin-top: 50px;">
         <div class="container">
+            <h2 class="section-title">Mes Projets</h2>
+            
             <div class="projets-grid">
                 
                 <div class="projet-card">
                     <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=600&q=80" alt="Debian">
                     <div class="projet-card-content">
-                        <h3>Services DHCP & DNS (Linux)</h3>
-                        <p>Mise en place d'une infrastructure LAN virtualisée sous Debian 12.9.</p>
-                        <button class="btn-primary btn-sm" onclick="ouvrirModal('modal-projet-1')">Voir les détails <i class="fas fa-arrow-right"></i></button>
+                        <div style="background:var(--border); font-size:0.7rem; padding:4px 10px; border-radius:20px; align-self:flex-start; margin-bottom:10px;">SCOLAIRE</div>
+                        <h3>Infrastructure LAN (DHCP & DNS)</h3>
+                        <p>Déploiement d'une infrastructure virtualisée sous Debian 12 avec attribution dynamique et résolution locale.</p>
+                        <button class="btn-details" onclick="ouvrirModal('projet1')">Voir les détails &rarr;</button>
+                    </div>
+                </div>
+
+                <div class="projet-card">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80" alt="Code">
+                    <div class="projet-card-content">
+                        <div style="background:var(--border); font-size:0.7rem; padding:4px 10px; border-radius:20px; align-self:flex-start; margin-bottom:10px;">PROFESSIONNEL</div>
+                        <h3>Déploiement Active Directory</h3>
+                        <p>Mise en place complète d'une forêt AD sur Windows Server 2022 avec gestion des GPO.</p>
+                        <button class="btn-details" onclick="ouvrirModal('projet2')">Voir les détails &rarr;</button>
+                    </div>
+                </div>
+
+                <div class="projet-card">
+                    <img src="https://images.unsplash.com/photo-1614064641936-3899897fa284?auto=format&fit=crop&w=600&q=80" alt="Serveur">
+                    <div class="projet-card-content">
+                        <div style="background:var(--border); font-size:0.7rem; padding:4px 10px; border-radius:20px; align-self:flex-start; margin-bottom:10px;">PERSONNEL</div>
+                        <h3>Mise en place de GLPI</h3>
+                        <p>Installation d'un serveur de ticketing GLPI pour la gestion de parc informatique.</p>
+                        <button class="btn-details" onclick="ouvrirModal('projet3')">Voir les détails &rarr;</button>
                     </div>
                 </div>
 
@@ -45,28 +61,31 @@
         </div>
     </section>
 
-    <div id="modal-projet-1" class="modal-overlay">
+    <div id="projet1" class="modal-overlay">
         <div class="modal-content">
-            <span class="close-btn" onclick="fermerModal('modal-projet-1')">&times;</span>
-            <h2>Services DHCP & DNS sous Linux (Debian)</h2>
-            <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=800&q=80" alt="Debian Architecture" style="width:100%; border-radius:8px; margin: 20px 0;">
-            <p><strong>Contexte :</strong> Déploiement complet d'un LAN sur Oracle VirtualBox.</p>
+            <span class="close-btn" onclick="fermerModal('projet1')">&times;</span>
+            <h2 style="margin-bottom: 20px; color: var(--primary);">Infrastructure LAN (DHCP & DNS)</h2>
+            
+            <div class="modal-gallery">
+                <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=400&q=80">
+                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=400&q=80">
+            </div>
+
+            <p style="margin-bottom: 20px;"><strong>Description :</strong> Mise en place d'une infrastructure réseau locale (LAN) entièrement virtualisée sous Debian 12.9 (Bookworm) via Oracle VirtualBox.</p>
             <ul>
-                <li><i class="fas fa-check" style="color: #2ecc71;"></i> <strong>Service DHCP (Kea) :</strong> Attribution dynamique des adresses IP.</li>
-                <li><i class="fas fa-check" style="color: #2ecc71;"></i> <strong>Service DNS (Bind9) :</strong> Zones de recherche directe et inversée.</li>
-                <li><i class="fas fa-check" style="color: #2ecc71;"></i> <strong>Sécurité :</strong> Configuration des interfaces en IP statique.</li>
+                <li><strong>Configuration Réseau :</strong> Paramétrage des interfaces en IP statique.</li>
+                <li><strong>Service DHCP (Kea) :</strong> Attribution dynamique des adresses IP aux clients.</li>
+                <li><strong>Service DNS (Bind9) :</strong> Déploiement des zones de recherche directe et inversée.</li>
             </ul>
         </div>
     </div>
 
-    <footer>
-        <p>&copy; 2026 Maxime Gauvenet - Portfolio Professionnel</p>
-    </footer>
+    <div id="projet2" class="modal-overlay"><div class="modal-content"><span class="close-btn" onclick="fermerModal('projet2')">&times;</span><h2>Déploiement AD</h2><p>Contenu à venir...</p></div></div>
+    <div id="projet3" class="modal-overlay"><div class="modal-content"><span class="close-btn" onclick="fermerModal('projet3')">&times;</span><h2>GLPI</h2><p>Contenu à venir...</p></div></div>
 
     <script>
         function ouvrirModal(id) { document.getElementById(id).style.display = 'flex'; }
         function fermerModal(id) { document.getElementById(id).style.display = 'none'; }
     </script>
-
 </body>
 </html>
