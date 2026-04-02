@@ -38,22 +38,12 @@
                 </div>
 
                 <div class="projet-card">
-                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80" alt="Code">
+                    <img src="https://images.unsplash.com/photo-1593640495253-23196b27a87f?auto=format&fit=crop&w=600&q=80" alt="Serveur VoIP">
                     <div class="projet-card-content">
-                        <div style="background:var(--border); font-size:0.7rem; padding:4px 10px; border-radius:20px; align-self:flex-start; margin-bottom:10px;">PROFESSIONNEL</div>
-                        <h3>Déploiement Active Directory</h3>
-                        <p>Mise en place complète d'une forêt AD sur Windows Server 2022 avec gestion des GPO.</p>
+                        <div style="background:var(--border); font-size:0.7rem; padding:4px 10px; border-radius:20px; align-self:flex-start; margin-bottom:10px;">SCOLAIRE</div>
+                        <h3>Téléphonie IP Hybride (VoIP / SD-WAN)</h3>
+                        <p>Déploiement d'une architecture téléphonique sécurisée avec FreePBX et accès distant via VPN ZeroTier.</p>
                         <button class="btn-details" onclick="ouvrirModal('projet2')">Voir les détails &rarr;</button>
-                    </div>
-                </div>
-
-                <div class="projet-card">
-                    <img src="https://images.unsplash.com/photo-1614064641936-3899897fa284?auto=format&fit=crop&w=600&q=80" alt="Serveur">
-                    <div class="projet-card-content">
-                        <div style="background:var(--border); font-size:0.7rem; padding:4px 10px; border-radius:20px; align-self:flex-start; margin-bottom:10px;">PERSONNEL</div>
-                        <h3>Mise en place de GLPI</h3>
-                        <p>Installation d'un serveur de ticketing GLPI pour la gestion de parc informatique et support.</p>
-                        <button class="btn-details" onclick="ouvrirModal('projet3')">Voir les détails &rarr;</button>
                     </div>
                 </div>
 
@@ -82,35 +72,20 @@
     <div id="projet2" class="modal-overlay">
         <div class="modal-content">
             <span class="close-btn" onclick="fermerModal('projet2')">&times;</span>
-            <h2 style="margin-bottom: 20px; color: var(--primary);">Déploiement Active Directory</h2>
+            <h2 style="margin-bottom: 20px; color: var(--primary);">Déploiement d'une architecture VoIP / SD-WAN</h2>
             <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 10px;"><i class="fas fa-info-circle"></i> Cliquez sur les images pour les agrandir.</p>
+            
             <div class="modal-gallery">
-                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="Image AD 1" onclick="ouvrirLightbox(this)">
-                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80" alt="Image AD 2" onclick="ouvrirLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1614064641936-3899897fa284?auto=format&fit=crop&w=800&q=80" alt="Serveur VoIP" onclick="ouvrirLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80" alt="Configuration ZeroTier" onclick="ouvrirLightbox(this)">
             </div>
-            <p style="margin-bottom: 20px;"><strong>Description :</strong> Mise en place complète d'une infrastructure domaine sous Windows Server 2022 pour simuler un environnement d'entreprise.</p>
-            <ul>
-                <li><i class="fas fa-check" style="color: var(--primary);"></i> <strong>Création d'utilisateurs :</strong> Importation de listes, gestion des OU et groupes de sécurité.</li>
-                <li><i class="fas fa-check" style="color: var(--primary);"></i> <strong>Stratégies de groupes (GPO) :</strong> Mappage de lecteurs réseaux, restriction du panneau de configuration.</li>
-                <li><i class="fas fa-check" style="color: var(--primary);"></i> <strong>Sécurité :</strong> Configuration d'une politique de mots de passe stricts.</li>
-            </ul>
-        </div>
-    </div>
 
-    <div id="projet3" class="modal-overlay">
-        <div class="modal-content">
-            <span class="close-btn" onclick="fermerModal('projet3')">&times;</span>
-            <h2 style="margin-bottom: 20px; color: var(--primary);">Mise en place de GLPI</h2>
-            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 10px;"><i class="fas fa-info-circle"></i> Cliquez sur les images pour les agrandir.</p>
-            <div class="modal-gallery">
-                <img src="https://images.unsplash.com/photo-1614064641936-3899897fa284?auto=format&fit=crop&w=800&q=80" alt="Image GLPI 1" onclick="ouvrirLightbox(this)">
-                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="Image GLPI 2" onclick="ouvrirLightbox(this)">
-            </div>
-            <p style="margin-bottom: 20px;"><strong>Description :</strong> Installation d'un serveur GLPI sous Linux pour assurer le suivi des incidents (Ticketing) et l'inventaire du parc informatique.</p>
+            <p style="margin-bottom: 20px;"><strong>Contexte :</strong> Projet de refonte pour la Maison des Ligues d'Île-de-France (MLIF) visant à déployer une infrastructure de téléphonie sur IP autonome, fonctionnelle et hybride.</p>
             <ul>
-                <li><i class="fas fa-check" style="color: var(--primary);"></i> <strong>Installation :</strong> Déploiement du serveur web LAMP (Linux, Apache, MariaDB, PHP).</li>
-                <li><i class="fas fa-check" style="color: var(--primary);"></i> <strong>Ticketing :</strong> Création de formulaires pour la remontée d'incidents utilisateurs.</li>
-                <li><i class="fas fa-check" style="color: var(--primary);"></i> <strong>Inventaire :</strong> Configuration de l'agent FusionInventory pour la remontée automatique des postes.</li>
+                <li><i class="fas fa-check" style="color: var(--primary);"></i> <strong>Déploiement Serveur IPBX :</strong> Installation d'un serveur sous SangomaOS (FreePBX / Asterisk) virtualisé pour la gestion des appels locaux, des messageries vocales et des groupes d'appels (Ring Group 600).</li>
+                <li><i class="fas fa-check" style="color: var(--primary);"></i> <strong>Clients Softphones :</strong> Configuration des comptes SIP (PJSIP) sur les postes clients Debian via l'application Linphone.</li>
+                <li><i class="fas fa-check" style="color: var(--primary);"></i> <strong>Réseau & Sécurité :</strong> Configuration d'un routeur Debian centralisant le routage inter-VLAN, le pare-feu NAT, le DHCP et le DNS BIND9.</li>
+                <li><i class="fas fa-check" style="color: var(--primary);"></i> <strong>Mobilité & Accès Distant (BYOD) :</strong> Mise en place d'un réseau overlay (VPN Mesh ZeroTier) permettant aux smartphones et postes distants de rejoindre l'infrastructure téléphonique de manière chiffrée, sans ouverture de port.</li>
             </ul>
         </div>
     </div>
@@ -127,25 +102,19 @@
     </footer>
 
     <script>
-        // Gestion des modales
         function ouvrirModal(id) { document.getElementById(id).style.display = 'flex'; }
         function fermerModal(id) { document.getElementById(id).style.display = 'none'; }
 
-        // Gestion de la visionneuse d'images
         let imagesGalerie = [];
         let indexImageCourante = 0;
 
         function ouvrirLightbox(elementImage) {
-            // Trouver toutes les images de la même galerie
             const galerie = elementImage.closest('.modal-gallery');
             const images = galerie.querySelectorAll('img');
             
-            // Créer une liste de toutes les sources d'images
             imagesGalerie = Array.from(images).map(img => img.src);
-            // Trouver la position de l'image cliquée
             indexImageCourante = imagesGalerie.indexOf(elementImage.src);
             
-            // Afficher le lightbox avec la bonne image
             document.getElementById('lightbox-img').src = imagesGalerie[indexImageCourante];
             document.getElementById('lightbox').style.display = 'flex';
         }
@@ -156,12 +125,9 @@
 
         function changerImage(direction) {
             indexImageCourante += direction;
-            // Si on dépasse la fin, on revient au début
             if (indexImageCourante >= imagesGalerie.length) {
                 indexImageCourante = 0;
-            } 
-            // Si on recule avant le début, on va à la fin
-            else if (indexImageCourante < 0) {
+            } else if (indexImageCourante < 0) {
                 indexImageCourante = imagesGalerie.length - 1;
             }
             document.getElementById('lightbox-img').src = imagesGalerie[indexImageCourante];
