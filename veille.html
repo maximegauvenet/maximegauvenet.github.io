@@ -27,59 +27,59 @@
             
             <div class="veille-intro">
                 <div style="display: flex; align-items: center; gap: 20px; border-bottom: 1px solid var(--border); padding-bottom: 20px; margin-bottom: 20px;">
-                    <i class="fas fa-shield-alt" style="font-size: 2.5rem; color: var(--primary);"></i>
+                    <i class="fas fa-cloud" style="font-size: 2.5rem; color: var(--primary);"></i>
                     <div>
-                        <h3 style="font-size: 1.8rem; color: white;">Le modèle Zero Trust (ZTNA)</h3>
-                        <p style="color: var(--text-muted);">"Ne jamais faire confiance, toujours vérifier"</p>
+                        <h3 style="font-size: 1.8rem; color: white;">Le Cloud Networking (NaaS & SD-Branch)</h3>
+                        <p style="color: var(--text-muted);">"Externaliser l'intelligence du réseau vers le Cloud"</p>
                     </div>
                 </div>
                 
                 <div class="veille-text-block">
                     <h4>Qu'est-ce que cette technologie ?</h4>
-                    <p>Le <strong>Zero Trust Network Access (ZTNA)</strong> est une rupture avec l'informatique "périmétrique" classique. Dans un réseau standard, on considère que tout ce qui est à l'intérieur du LAN est sûr. Le Zero Trust considère que <strong>le réseau est compromis par défaut</strong>. Chaque utilisateur, appareil et flux doit prouver son identité en continu.</p>
+                    <p>Le <strong>Network as a Service (NaaS)</strong> représente la fin de l'administration réseau traditionnelle "en ligne de commande" (CLI). Les équipements physiques (Switchs, Bornes Wi-Fi, Pare-feu) sont toujours présents dans l'entreprise, mais leur "cerveau" est déporté dans le Cloud. Toute la configuration, la supervision et la sécurité sont gérées depuis un tableau de bord web centralisé (Dashboard).</p>
                 </div>
 
                 <div class="veille-text-block">
-                    <h4>Pourquoi est-ce une révolution ?</h4>
-                    <p>Avec l'explosion du Cloud et du télétravail, le VPN classique est devenu un point de faiblesse (s'il est piraté, l'attaquant accède à tout). Le ZTNA remplace cela par une <strong>micro-segmentation</strong> : l'utilisateur ne voit que les applications dont il a strictement besoin.</p>
+                    <h4>Pourquoi est-ce une révolution pour les admins SISR ?</h4>
+                    <p>Grâce au <strong>ZTP (Zero Touch Provisioning)</strong>, il suffit de brancher un équipement à Internet pour qu'il télécharge automatiquement sa configuration. Cela permet de déployer et de gérer des dizaines de sites distants (concept du <strong>SD-Branch</strong>) sans jamais avoir à se déplacer. C'est une technologie que j'ai pu expérimenter en conditions réelles avec les solutions <strong>Cisco Meraki</strong> lors de mon stage.</p>
                 </div>
             </div>
 
             <h3 class="sub-section-title" style="margin-top: 50px;"><i class="fas fa-history"></i> Synthèse de l'évolution (2024 - 2026)</h3>
-            <p style="color: var(--text-muted); margin-bottom: 40px;">Retrouvez ci-dessous les articles majeurs qui ont marqué l'évolution et l'adoption du modèle Zero Trust durant ma formation en BTS SIO.</p>
+            <p style="color: var(--text-muted); margin-bottom: 40px;">Retrouvez ci-dessous l'évolution des infrastructures Cloud Networking durant mon cursus en BTS SIO.</p>
             
             <div class="timeline" style="border-left: 3px solid var(--primary); padding-left: 30px; margin-bottom: 80px; max-width: 900px;">
                 
                 <div class="timeline-item" style="margin-bottom: 40px;">
-                    <div class="timeline-date" style="color: var(--primary); font-weight: 700; margin-bottom: 10px;">Début 2024 : L'intégration réglementaire (NIS 2)</div>
+                    <div class="timeline-date" style="color: var(--primary); font-weight: 700; margin-bottom: 10px;">2024 : Du SD-WAN vers le SD-Branch</div>
                     <div class="timeline-content" style="background: var(--bg-card); padding: 25px; border-radius: 8px; border: 1px solid var(--border);">
-                        <h4 style="color: white; margin-bottom: 10px; font-size: 1.1rem;">Le Zero Trust devient un standard légal</h4>
-                        <p style="color: var(--text-muted); margin-bottom: 15px; font-size: 0.95rem;">L'Union Européenne adopte la directive NIS 2, obligeant des milliers d'entreprises à renforcer leur cybersécurité face aux ransomwares. L'ANSSI et les instances gouvernementales recommandent officiellement d'abandonner les VPN classiques au profit d'architectures Zero Trust.</p>
-                        <a href="https://www.ssi.gouv.fr/actualite/directive-nis-2-le-dispositif-national-se-precise/" target="_blank" class="article-link" style="font-size: 0.85rem;"><i class="fas fa-link"></i> Recommandations ANSSI (2024)</a>
+                        <h4 style="color: white; margin-bottom: 10px; font-size: 1.1rem;">L'unification du réseau distant et local</h4>
+                        <p style="color: var(--text-muted); margin-bottom: 15px; font-size: 0.95rem;">Alors que le SD-WAN gérait uniquement les liaisons inter-sites, l'année 2024 marque l'essor du SD-Branch. Les entreprises exigent de contrôler non seulement la liaison, mais aussi le réseau local (LAN/WLAN) de la succursale depuis la même interface Cloud. Les leaders comme Cisco Meraki ou Aruba consolident leurs tableaux de bord.</p>
+                        <a href="https://meraki.cisco.com/fr-fr/solutions/sd-branch/" target="_blank" class="article-link" style="font-size: 0.85rem;"><i class="fas fa-link"></i> Architecture SD-Branch (Cisco)</a>
                     </div>
                 </div>
 
                 <div class="timeline-item" style="margin-bottom: 40px;">
-                    <div class="timeline-date" style="color: var(--primary); font-weight: 700; margin-bottom: 10px;">2025 : L'ère de l'Intelligence Artificielle (ZTNA 2.0)</div>
+                    <div class="timeline-date" style="color: var(--primary); font-weight: 700; margin-bottom: 10px;">2025 : L'intégration de l'AIOps (Intelligence Artificielle)</div>
                     <div class="timeline-content" style="background: var(--bg-card); padding: 25px; border-radius: 8px; border: 1px solid var(--border);">
-                        <h4 style="color: white; margin-bottom: 10px; font-size: 1.1rem;">Détection comportementale et automatisation</h4>
-                        <p style="color: var(--text-muted); margin-bottom: 15px; font-size: 0.95rem;">Le modèle évolue avec l'IA. L'authentification ne se fait plus seulement à la connexion, mais <em>en continu</em>. Les algorithmes analysent le comportement de l'utilisateur (vitesse de frappe, localisation, horaires) pour révoquer l'accès instantanément en cas de vol de session (session hijacking).</p>
-                        <a href="https://www.paloaltonetworks.com/blog/tags/zero-trust/" target="_blank" class="article-link" style="font-size: 0.85rem;"><i class="fas fa-link"></i> Évolution de l'IA (Palo Alto Networks)</a>
+                        <h4 style="color: white; margin-bottom: 10px; font-size: 1.1rem;">La supervision prédictive</h4>
+                        <p style="color: var(--text-muted); margin-bottom: 15px; font-size: 0.95rem;">Le Cloud Networking franchit un nouveau cap avec l'AIOps (Artificial Intelligence for IT Operations). Le tableau de bord n'est plus seulement un outil de configuration, il devient proactif. L'IA analyse les pannes de câbles, l'encombrement Wi-Fi et les erreurs DHCP, et propose des solutions avant même que l'utilisateur ne contacte le support informatique.</p>
+                        <a href="https://www.networkworld.com/article/972175/what-is-aiops.html" target="_blank" class="article-link" style="font-size: 0.85rem;"><i class="fas fa-link"></i> L'AIOps dans les réseaux (NetworkWorld)</a>
                     </div>
                 </div>
 
                 <div class="timeline-item" style="margin-bottom: 40px;">
-                    <div class="timeline-date" style="color: var(--primary); font-weight: 700; margin-bottom: 10px;">2026 : Le déclin définitif du VPN classique</div>
+                    <div class="timeline-date" style="color: var(--primary); font-weight: 700; margin-bottom: 10px;">2026 : Le NaaS devient la norme face à l'enjeu des coûts</div>
                     <div class="timeline-content" style="background: var(--bg-card); padding: 25px; border-radius: 8px; border: 1px solid var(--border);">
-                        <h4 style="color: white; margin-bottom: 10px; font-size: 1.1rem;">Adoption massive par les PME et grands groupes</h4>
-                        <p style="color: var(--text-muted); margin-bottom: 15px; font-size: 0.95rem;">Le ZTNA devient la norme standard pour l'accès distant. Les fournisseurs Cloud (Microsoft Entra, Cloudflare, Zscaler) démocratisent la technologie, rendant la micro-segmentation accessible même aux structures avec des budgets informatiques limités.</p>
-                        <a href="https://www.microsoft.com/fr-fr/security/business/zero-trust" target="_blank" class="article-link" style="font-size: 0.85rem;"><i class="fas fa-link"></i> Rapport Microsoft Security 2026</a>
+                        <h4 style="color: white; margin-bottom: 10px; font-size: 1.1rem;">Transition du CapEx vers l'OpEx</h4>
+                        <p style="color: var(--text-muted); margin-bottom: 15px; font-size: 0.95rem;">Les PME et ETI abandonnent l'achat ponctuel de matériel lourd (CapEx) pour s'abonner à des services réseaux mensuels (OpEx). Le débat se concentre désormais sur le "Vendor Lock-in" : la dépendance forte aux licences Cloud (sans lesquelles le matériel cesse de fonctionner), qui oblige les administrateurs à repenser la souveraineté de leur infrastructure.</p>
+                        <a href="https://www.zdnet.fr/" target="_blank" class="article-link" style="font-size: 0.85rem;"><i class="fas fa-link"></i> Le modèle NaaS en entreprise (ZDNet)</a>
                     </div>
                 </div>
 
             </div>
 
-            <h3 class="sub-section-title"><i class="fas fa-sync fa-spin"></i> Dernières actualités Zero Trust (Temps Réel)</h3>
+            <h3 class="sub-section-title"><i class="fas fa-sync fa-spin"></i> Dernières actualités Cloud Networking (Temps Réel)</h3>
             <div id="flux-rss-container" class="veille-articles-grid">
                 <p style="color: var(--text-muted);">Recherche des derniers articles sur Google News...</p>
             </div>
@@ -88,7 +88,8 @@
     </section>
 
     <script>
-        const rssUrl = "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnews.google.com%2Frss%2Fsearch%3Fq%3D%2522Zero%2BTrust%2522%2Bcybers%25C3%25A9curit%25C3%25A9%26hl%3Dfr%26gl%3DFR%26ceid%3DFR%3Afr";
+        // Requête spécifique Google News: "Cloud Networking" OU "Cisco Meraki" OU "NaaS"
+        const rssUrl = "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnews.google.com%2Frss%2Fsearch%3Fq%3D%2522Cloud%2BNetworking%2522%2BOR%2B%2522Cisco%2BMeraki%2522%2BOR%2B%2522NaaS%2522%26hl%3Dfr%26gl%3DFR%26ceid%3DFR%3Afr";
         
         fetch(rssUrl)
             .then(response => response.json())
@@ -116,6 +117,6 @@
             });
     </script>
 
-    <footer><p>&copy; 2026 Maxime Gauvenet</p></footer>
+    <footer><p>&copy; 2026 Maxime Gauvenet - Portfolio Professionnel</p></footer>
 </body>
 </html>
