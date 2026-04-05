@@ -21,48 +21,83 @@
         </ul>
     </nav>
 
-    <section class="section-padding" style="margin-top: 50px;">
+    <section id="competences" class="section-padding bg-alt">
         <div class="container">
-            <h2 class="section-title">Mes Compétences</h2>
+            <h2 class="section-title text-center">Mes Compétences</h2>
+            <p class="section-subtitle text-center" style="margin-bottom: 50px;">Au fil de ma formation et de mes expériences, j'ai pu développer mon expertise et la structurer autour de 4 grands piliers de l'infrastructure :</p>
             
-            <div class="skills-grid">
+            <h3 class="sub-section-title"><i class="fas fa-server"></i> Systèmes & Administration</h3>
+            <div class="skills-grid" style="margin-bottom: 50px;">
                 <div class="skill-card">
                     <img src="https://www.debian.org/logos/openlogo-nd-100.png" alt="Debian">
-                    <span>Debian</span>
+                    <span>Debian Linux</span>
                 </div>
                 <div class="skill-card">
                     <i class="fab fa-windows" style="color:#00a4ef"></i>
                     <span>Windows Server</span>
                 </div>
                 <div class="skill-card">
-                    <i class="fas fa-network-wired" style="color:#10b981"></i>
+                    <i class="fas fa-users-cog" style="color:#ec4899"></i>
+                    <span>Active Directory<br><span style="font-size:0.8rem;color:var(--text-muted);">Utilisateurs, Groupes, GPO</span></span>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-network-wired" style="color:#8b5cf6"></i>
+                    <span>Services LAN<br><span style="font-size:0.8rem;color:var(--text-muted);">DHCP (Kea), DNS (Bind9)</span></span>
+                </div>
+            </div>
+
+            <h3 class="sub-section-title"><i class="fas fa-route"></i> Réseaux & Télécommunications</h3>
+            <div class="skills-grid" style="margin-bottom: 50px;">
+                <div class="skill-card">
+                    <i class="fas fa-project-diagram" style="color:#10b981"></i>
                     <span>Cisco Packet Tracer</span>
                 </div>
                 <div class="skill-card">
-                    <i class="fas fa-shield-alt" style="color:var(--primary)"></i>
-                    <span>Active Directory</span>
+                    <i class="fas fa-exchange-alt" style="color:#e67e22"></i>
+                    <span>Routage & Protocoles<br><span style="font-size:0.8rem;color:var(--text-muted);">OSPF, TCP/IP, VLAN</span></span>
                 </div>
+                <div class="skill-card">
+                    <i class="fas fa-random" style="color:#f39c12"></i>
+                    <span>Translation d'adresses<br><span style="font-size:0.8rem;color:var(--text-muted);">NAT, PAT</span></span>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-phone-volume" style="color:#0ea5e9"></i>
+                    <span>Téléphonie IP<br><span style="font-size:0.8rem;color:var(--text-muted);">VoIP, FreePBX, SIP</span></span>
+                </div>
+            </div>
+
+            <h3 class="sub-section-title"><i class="fas fa-shield-alt"></i> Sécurité & Supervision</h3>
+            <div class="skills-grid" style="margin-bottom: 50px;">
+                <div class="skill-card">
+                    <i class="fas fa-fire-extinguisher" style="color:#e74c3c"></i>
+                    <span>Fail2ban<br><span style="font-size:0.8rem;color:var(--text-muted);">Protection contre les intrusions</span></span>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-chart-line" style="color:#d32f2f"></i>
+                    <span>Zabbix<br><span style="font-size:0.8rem;color:var(--text-muted);">Monitoring & Supervision</span></span>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-user-shield" style="color:#34495e"></i>
+                    <span>Cybersécurité<br><span style="font-size:0.8rem;color:var(--text-muted);">Zero Trust, Phishing (Riot)</span></span>
+                </div>
+            </div>
+
+            <h3 class="sub-section-title"><i class="fas fa-cube"></i> Virtualisation & Support IT</h3>
+            <div class="skills-grid">
                 <div class="skill-card">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Virtualbox_logo.png" alt="VirtualBox">
                     <span>Oracle VirtualBox</span>
                 </div>
                 <div class="skill-card">
+                    <i class="fab fa-docker" style="color:#2496ed; font-size: 50px; margin-bottom: 20px;"></i>
+                    <span>Docker<br><span style="font-size:0.8rem;color:var(--text-muted);">Conteneurisation</span></span>
+                </div>
+                <div class="skill-card">
                     <i class="fas fa-headset" style="color:#f59e0b"></i>
-                    <span>Support & GLPI</span>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-route" style="color:#e67e22"></i>
-                    <span>Routage & OSPF<br><span style="font-size:0.8rem;color:var(--text-muted);">TCP/IP, Commutation</span></span>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-server" style="color:#8b5cf6"></i>
-                    <span>Services LAN<br><span style="font-size:0.8rem;color:var(--text-muted);">DHCP (Kea), DNS (Bind9)</span></span>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-users-cog" style="color:#ec4899"></i>
-                    <span>Gestion AD<br><span style="font-size:0.8rem;color:var(--text-muted);">Utilisateurs, Groupes, GPO</span></span>
+                    <span>Helpdesk & Support<br><span style="font-size:0.8rem;color:var(--text-muted);">Ticketing via GLPI</span></span>
                 </div>
             </div>
+
         </div>
     </section>
 
