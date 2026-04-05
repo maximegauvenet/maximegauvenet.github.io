@@ -88,8 +88,8 @@
     </section>
 
     <script>
-        // Requête spécifique Google News: "Cloud Networking" OU "Cisco Meraki" OU "NaaS"
-        const rssUrl = "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnews.google.com%2Frss%2Fsearch%3Fq%3D%2522Cloud%2BNetworking%2522%2BOR%2B%2522Cisco%2BMeraki%2522%2BOR%2B%2522NaaS%2522%26hl%3Dfr%26gl%3DFR%26ceid%3DFR%3Afr";
+        // Requête Google News ultra-ciblée: "Cloud Networking" OR "Cisco Meraki" OR "Network as a Service" OR "SD-Branch"
+        const rssUrl = "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnews.google.com%2Frss%2Fsearch%3Fq%3D%2522Cloud%2BNetworking%2522%2BOR%2B%2522Cisco%2BMeraki%2522%2BOR%2B%2522Network%2Bas%2Ba%2BService%2522%2BOR%2B%2522SD-Branch%2522%26hl%3Dfr%26gl%3DFR%26ceid%3DFR%3Afr";
         
         fetch(rssUrl)
             .then(response => response.json())
@@ -97,7 +97,13 @@
                 const container = document.getElementById('flux-rss-container');
                 container.innerHTML = ''; 
                 
-                data.items.slice(0, 6).forEach(item => {
+                // Filtre de sécurité supplémentaire au cas où
+                let articlesValides = data.items.filter(item => 
+                    !item.title.toLowerCase().includes('people') && 
+                    !item.title.toLowerCase().includes('meurtre')
+                );
+
+                articlesValides.slice(0, 6).forEach(item => {
                     const dateObj = new Date(item.pubDate);
                     const dateFR = dateObj.toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' });
                     
